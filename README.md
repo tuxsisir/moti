@@ -104,7 +104,7 @@ Interactive Form for Data Input:
 
 Please run the following command:
 
-`$ docker-compose up  –build`
+`$ docker-compose up --build`
 
 
 ---
