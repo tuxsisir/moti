@@ -1,5 +1,5 @@
 # Use the official Python image from Docker Hub as a base image
-FROM python:3.8
+FROM python:3.9
 
 # Set environment variables for running Django in production
 ENV PYTHONUNBUFFERED 1
@@ -19,8 +19,5 @@ COPY . /app/
 # Expose the port the application runs on (default for Django is 8000)
 EXPOSE 8000
 
-# Start the Django development server
-CMD ["python", "moti/manage.py", "migrate"]
+CMD ["sh","-c","python moti/manage.py migrate && python moti/manage.py runserver 0.0.0.0:8000"]
 
-# Start the Django development server
-CMD ["python", "moti/manage.py", "runserver", "0.0.0.0:8000"]

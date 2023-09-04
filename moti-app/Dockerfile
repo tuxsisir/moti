@@ -17,9 +17,15 @@ COPY . /app/
 # Build the Vue 3 frontend code
 RUN npm run build
 
-# Expose the port where the frontend application will run (if needed)
+# Command to serve the frontend
+# CMD ["npm", "run", "preview"]
+
+# Install serve globally to serve the application
+RUN npm install -g serve
+
+# Expose port 4000
 EXPOSE 8080
 
-# Command to serve the frontend (if using a simple HTTP server)
-CMD ["npm", "run", "preview", "--host"]
+# Command to serve the application using serve
+CMD ["serve", "-s", "dist", "-l", "8080"]
 
