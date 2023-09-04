@@ -106,9 +106,9 @@ Please run the following command:
 
 `$ docker-compose up --build`
 
-Access Backend: [https://localhost:8000/](https://localhost:8000/)
+Access Backend: [http://localhost:8000/](https://localhost:8000/)
 
-Access Frontend: [https://localhost:8080/](https://localhost:8080/)
+Access Frontend: [http://localhost:8080/](https://localhost:8080/)
 
 ---
 
